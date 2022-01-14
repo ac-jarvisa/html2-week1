@@ -67,6 +67,14 @@ body{
     background-color:blanchedalmond;
 }
 
+/* the class clearfix will be used anytime we want an element to see the height of
+floated things inside it */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 /* to target an ID, use the # before the ID name */
 #reallyBig{
     font-size:48px;
@@ -91,6 +99,24 @@ main{
     margin:10px; /* one value means apply to all sides */
     padding:15px;
     border: 2px solid black;
+}
+
+main img{
+    width:30%;
+    float: left; /* text wraps around floated images */
+    margin-right: 10px;
+}
+
+/* add some padding to the footer so we can play with a background image */
+footer{
+    padding:40px 10px; /* 40px top-bottom, 10px left-right */
+    background-image:url("../images/nebula-back.jpg"); /* ../ means go up one folder */
+    background-repeat:no-repeat;
+    /*background-size:contain; - contain makes the entire background image visible inside the element */
+    background-size: cover; /* ensures the background image always covers the whole element; */
+    background-position: 70%; /* two values will be horizontal position and vertical position */
+    /* backround position can have top, bottom, left, right, center, or a fixed value */
+    color:white;
 }
 
 
